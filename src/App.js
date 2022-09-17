@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 const LOCAL_STORAGE_KEY = "todoApp.todos"
 
 function App() {
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)))
   const todoNameRef = useRef();
 
   useEffect(()=>{
